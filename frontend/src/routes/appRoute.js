@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { render } from "react-dom";
 import Home from "../pages/home";
@@ -9,10 +9,16 @@ import Form from "../pages/form";
 import SelectTokens from "../pages/selectTokens";
 import SuccessMessage from "../pages/successMsg";
 import Edit from "../pages/edit";
+import 'aos/dist/aos.css';
+import Aos from "aos";
 
 const AppRoute = () => {
 
     const legacy = localStorage.getItem('has_legacy');
+
+    useEffect(() => {
+      Aos.init();
+    }, [])
     
   return render(
     <BrowserRouter>

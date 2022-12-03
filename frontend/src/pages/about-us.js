@@ -7,7 +7,7 @@ import howItWorks from "../images/how-it-works.png";
 const AboutUs = () => {
   return (
     <Box p={{ base: '10px 40px', lg: "30px 80px"}}>
-        <Box display={{ base: 'block', lg: "flex"}} alignItems="center">
+        <Box display={{ base: 'block', lg: "flex"}} alignItems="center" id="about-us" data-aos="fade-up" data-aos-duration="3000" >
             <Box mt={{ base: '30px', lg: "100px"}} w={{ base: '100%', lg: '50%' }}>
                 <Box fontSize={{ base: '30px', lg: '75px' }} fontWeight="700" color="brand.white" w="80%">
                     <h1>Who we are</h1>
@@ -69,7 +69,7 @@ const AboutUs = () => {
             </SimpleGrid>
         </Box>
 
-        <Box display={{ base: 'block', md: "flex"}} alignItems="center">
+        <Box display={{ base: 'block', md: "flex"}} alignItems="center" id="how-it-works" data-aos="fade-up" data-aos-duration="3000" >
             <Box mt={{ base: '50px', lg: "100px"}} w={{ base: '100%', lg: '50%' }}>
                 <Box fontSize={{ base: '30px', lg: '75px' }} fontWeight="700" color="brand.white" w={{base: '100%', lg: "80%"}}>
                     <h1>How it Works</h1>

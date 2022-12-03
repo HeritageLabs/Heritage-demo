@@ -13,6 +13,7 @@ import getUserInterval, {
   isDisconnected,
   hasLegacy
 } from "../utils/helpers"
+import HeadTag from "../common/headTag";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const Navbar = () => {
 
   return (
     <>
+    <HeadTag title="About Us" />
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -99,27 +101,34 @@ const Navbar = () => {
             _hover={{ color: "brand.teal" }}
             color="brand.white"
             onClick={() => { goToProfile() }}
+            style={{ transition: "all 1.2s ease" }}
           >
             Profile
           </Text>
-          <Text
-            cursor="pointer"
-            ml={{ base: "0", lg: "100px" }}
-            mt={{ base: "20px", lg: "0" }}
-            _hover={{ color: "brand.teal" }}
-            color="brand.white"
-          >
-            About us
-          </Text>
-          <Text
-            cursor="pointer"
-            mt={{ base: "20px", lg: "0" }}
-            ml={{ base: "0", lg: "100px" }}
-            _hover={{ color: "brand.teal" }}
-            color="brand.white"
-          >
-            How it works
-          </Text>
+          <a href ="/#about-us">
+            <Text
+              cursor="pointer"
+              ml={{ base: "0", lg: "100px" }}
+              mt={{ base: "20px", lg: "0" }}
+              _hover={{ color: "brand.teal" }}
+              color="brand.white"
+              style={{ transition: "all 1.2s ease" }}
+            >
+              About us
+            </Text>
+          </a>
+          <a href="/#how-it-works">
+            <Text
+              cursor="pointer"
+              mt={{ base: "20px", lg: "0" }}
+              ml={{ base: "0", lg: "100px" }}
+              _hover={{ color: "brand.teal" }}
+              color="brand.white"
+              style={{ transition: "all 1.2s ease" }}
+            >
+              How it works
+            </Text>
+          </a>
         </Flex>
         {isConnected ?
           <CustomButton

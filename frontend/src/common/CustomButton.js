@@ -13,6 +13,7 @@ const CustomButton = ({ children, bg, color, onClick, border, mr, hover, w, mt, 
     onClick={onClick}
     border={border}
     borderColor={borderColor}
+    style={{ transition: "all 1.2s ease" }}
     mt={mt}
     fontWeight="medium"
     type="submit"
